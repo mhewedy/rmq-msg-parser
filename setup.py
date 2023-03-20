@@ -26,7 +26,7 @@ documentation = readall("README.md")
 # metadata = dict(
 #     re.findall(r"""__([a-z]+)__ = "([^"]+)""", readall("instapy", "__init__.py"))
 # )
-metadata = {"version": "0.0.1"}
+metadata = {"version": "0.0.2"}
 
 setup(
     name="rmq-msg-parser",
