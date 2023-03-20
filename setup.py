@@ -10,7 +10,7 @@ from os import path
 from setuptools import setup
 
 summary = "Tool for parsing rabbitmq messages from text file"
-project_homepage = "https://github.com/mhewedy/rmq_msg_parser"
+project_homepage = "https://github.com/mhewedy/rmq-msg-parser"
 here = path.abspath(path.dirname(__file__))
 
 
@@ -29,7 +29,7 @@ documentation = readall("README.md")
 metadata = {"version": "0.0.1"}
 
 setup(
-    name="rmq_msg_parser",
+    name="rmq-msg-parser",
     version=metadata["version"],
     description=summary,
     long_description=documentation,
@@ -44,7 +44,7 @@ setup(
         "How Tos": (project_homepage + "/tree/master/docs"),
         "Examples": (project_homepage + "/tree/master/quickstart_templates"),
         "Bug Reports": (project_homepage + "/issues"),
-        "Source": (project_homepage + "/tree/master/rmq_msg_parser"),
+        "Source": (project_homepage + "/tree/master/rmq-msg-parser"),
     },
     packages=["rmqparser"],
     classifiers=[

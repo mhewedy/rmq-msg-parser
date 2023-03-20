@@ -2,7 +2,7 @@
 
 ## Install:
 ```shell
-pip install git+https://github.com/mhewedy/rmq_msg_parser
+pip install git+https://github.com/mhewedy/rmq-msg-parser
 ```
 
 ## Usage:
