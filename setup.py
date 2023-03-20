@@ -29,7 +29,7 @@ documentation = readall("README.md")
 metadata = {"version": "0.0.1"}
 
 setup(
-    name="instapy",
+    name="rmq_msg_parser",
     version=metadata["version"],
     description=summary,
     long_description=documentation,
@@ -46,7 +46,7 @@ setup(
         "Bug Reports": (project_homepage + "/issues"),
         "Source": (project_homepage + "/tree/master/rmq_msg_parser"),
     },
-    packages=["rmq_msg_parser"],
+    packages=["parser"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",
