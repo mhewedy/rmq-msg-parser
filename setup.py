@@ -46,7 +46,7 @@ setup(
         "Bug Reports": (project_homepage + "/issues"),
         "Source": (project_homepage + "/tree/master/rmq_msg_parser"),
     },
-    packages=["rmq_msg_parser"],
+    packages=["rmqparser"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Environment :: Console",
