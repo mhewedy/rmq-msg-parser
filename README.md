@@ -1,6 +1,6 @@
 # RabbitMQ Message Parser
 
-A Library for parsing rabbitmq messages from text file
+A Python library for parsing rabbitmq messages from text file
 
 ## Install:
 ```shell
