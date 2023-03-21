@@ -4,7 +4,7 @@ A Library for parsing rabbitmq messages from text file
 
 ## Install:
 ```shell
-pip install git+https://github.com/mhewedy/rmq-msg-parser
+pip install --upgrade --force-reinstall git+https://github.com/mhewedy/rmq-msg-parser
 ```
 
 ## Usage:
