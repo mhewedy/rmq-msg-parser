@@ -9,7 +9,7 @@ from os import path
 
 from setuptools import setup
 
-summary = "Tool for parsing rabbitmq messages from text file"
+summary = "Library for parsing rabbitmq messages from text file"
 project_homepage = "https://github.com/mhewedy/rmq-msg-parser"
 here = path.abspath(path.dirname(__file__))
 
