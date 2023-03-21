@@ -38,6 +38,13 @@ def get_headers(lines):
     return headers
 
 
+def get_lines(lines):
+    ret = []
+    for line in lines:
+        ret.append(line.strip())
+    return ret
+
+
 def get_messages(file):
     with open(file, encoding='UTF8') as f:
 
@@ -62,7 +69,7 @@ def get_messages(file):
 
             lines = all_lines[start_line:end_line]
             msg = Message(id=msg_id,
-                          lines=lines,
+                          lines=get_lines(lines),
                           routing_key=get_routing_key(lines),
                           exchange=get_exchange(lines),
                           payload=get_payload(lines),
