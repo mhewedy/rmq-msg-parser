@@ -2,6 +2,8 @@
 
 A Python library for parsing rabbitmq messages from text file
 
+Learn more [https://mohewedy.medium.com/parse-rabbitmq-messages-2b2dec09280e](https://mohewedy.medium.com/parse-rabbitmq-messages-2b2dec09280e)
+
 ## Install:
 ```shell
 pip install --upgrade --force-reinstall git+https://github.com/mhewedy/rmq-msg-parser
