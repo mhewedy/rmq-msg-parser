@@ -33,7 +33,7 @@ def get_headers(lines):
     for line in lines:
         m = re.search(r'^(.*):\t(.*)$', line)
         if m is not None:
-            headers[m.group(1)] = m.group(2)
+            headers[m.group(1)] = m.group(2).strip()
 
     return headers
 
