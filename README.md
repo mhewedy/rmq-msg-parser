@@ -16,6 +16,7 @@ from rmqparser import messages
 msgs = messages.get_messages(r'data/my_rabbitmq_messages.txt')
 
 for m in msgs:
-    print(m.id, m.payload, m.headers, m.headers['__Exception_Message__'])
+    if m.headers.get('__Exception_Message__'):
+        print(m.id, m.payload, m.headers, m.headers['__Exception_Message__'])
 
 ```
