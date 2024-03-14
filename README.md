@@ -9,6 +9,8 @@ Learn more [https://mohewedy.medium.com/parse-rabbitmq-messages-2b2dec09280e](ht
 pip install --upgrade --force-reinstall git+https://github.com/mhewedy/rmq-msg-parser
 ```
 ### Install in non-pip envirnoment:
+If your environment doesn't have pip, or you cannot install it, then follow the following steps:
+
 1. create two directories, one for code and other for data
     ```shell
     mkdir data rmqparser
