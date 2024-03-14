@@ -8,6 +8,39 @@ Learn more [https://mohewedy.medium.com/parse-rabbitmq-messages-2b2dec09280e](ht
 ```shell
 pip install --upgrade --force-reinstall git+https://github.com/mhewedy/rmq-msg-parser
 ```
+## Use in non-pipe envirnoment:
+1. create two directories, one for code and other for data
+    ```shell
+    mkdir data rmqparser
+    ```
+2. copy the code from [messages.py](https://raw.githubusercontent.com/mhewedy/rmq-msg-parser/master/rmqparser/messages.py) into rmqparser/messages.py
+    ```shell
+    vim rmqparser/messages.py
+    ```
+    then paste the code from the link above
+3. copy the messages into data/my_rabbitmq_messages.txt
+   ```shell
+   vim data/my_rabbitmq_messages.txt
+   ```
+   then paste the messages into the opened vim file
+4. create a main from the code in the usage below:
+   ```shell
+   vim main.py
+   ```
+   then copy and paste the code from the usage section below
+5. run the main.py file
+   ```shell
+   python main.py
+   ```
+   should see result similar to
+   ```shell
+   Message ID: 1
+   Payload: {"id":13}
+   Exception Headers:
+	   ExceptionMessage: no data found
+	   ExceptionStackTrace: com.commons.integrations.Exception: no data found
+   ```
+
 
 ## Usage:
 ```python
