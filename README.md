@@ -23,7 +23,7 @@ pip install --upgrade --force-reinstall git+https://github.com/mhewedy/rmq-msg-p
    vim data/my_rabbitmq_messages.txt
    ```
    then paste the messages into the opened vim file
-4. create a main from the code in the usage below:
+4. create a main from the code in the [usage section](README.md#usage) below:
    ```shell
    vim main.py
    ```
