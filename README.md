@@ -45,6 +45,8 @@ If your environment doesn't have pip, or you cannot install it, then follow the 
 
 
 ## Usage:
+
+1. Print any message that has an exception header:
 ```python
 from rmqparser import messages
 
@@ -56,8 +58,7 @@ for m in msgs:
 
     # Check if any exception headers were found
     if exception_headers:
-        print(f"Message ID: {m.id}")
-        print(f"Payload: {m.payload}")
+        print(f"Message ID: {m.id}, Payload: {m.payload}")
 
         # Print only the exception headers
         print(f"Exception Headers:")
@@ -65,4 +66,27 @@ for m in msgs:
             print(f"\t{k}: {v}")
 
         print("\n")
+```
+2. Print any message that has an exception header, grouping by the exception header:
+```python
+from rmqparser import messages
+
+msgs = messages.get_messages(r'data/my_rabbitmq_messages.txt')
+
+messages_by_exception = {}
+
+for m in msgs:
+    exception_headers = {k: v for k, v in m.headers.items() if k.lower().find("exception") != -1}
+
+    if exception_headers:
+        exception = next(iter(exception_headers.values()), None)
+
+        if exception is not None:
+            messages_by_exception.setdefault(exception, [m]).append(m)
+
+for exception, exception_messages in messages_by_exception.items():
+    print(f'\n********** Exception: "{exception}", Occurrence: {len(exception_messages)} **********')
+
+    for message in exception_messages:
+        print(f"Message ID: {message.id}, Payload: {message.payload}")
 ```
