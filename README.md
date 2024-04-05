@@ -58,16 +58,14 @@ for m in msgs:
 
     # Check if any exception headers were found
     if exception_headers:
-        print(f"Message ID: {m.id}, Payload: {m.payload}")
+        print(f"\nmessage id: {m.id}, payload: {m.payload}")
 
         # Print only the exception headers
-        print(f"Exception Headers:")
+        print(f"exception Headers:")
         for k, v in exception_headers.items():
             print(f"\t{k}: {v}")
-
-        print("\n")
 ```
-2. Print any message that has an exception header, grouping by the exception header:
+2. Print any message that has an exception header, **grouped by the exception header**:
 ```python
 from rmqparser import messages
 
@@ -77,16 +75,13 @@ messages_by_exception = {}
 
 for m in msgs:
     exception_headers = {k: v for k, v in m.headers.items() if k.lower().find("exception") != -1}
-
     if exception_headers:
-        exception = next(iter(exception_headers.values()), None)
-
-        if exception is not None:
-            messages_by_exception.setdefault(exception, [m]).append(m)
+        for h in exception_headers.values():
+            messages_by_exception.setdefault(h, [m]).append(m)
 
 for exception, exception_messages in messages_by_exception.items():
-    print(f'\n********** Exception: "{exception}", Occurrence: {len(exception_messages)} **********')
+    print(f'\n********** exception: "{exception}", occurrence: {len(exception_messages)} **********')
 
     for message in exception_messages:
-        print(f"Message ID: {message.id}, Payload: {message.payload}")
+        print(f"message id: {message.id}, payload: {message.payload}")
 ```
