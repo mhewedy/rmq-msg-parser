@@ -53,10 +53,9 @@ from rmqparser import messages
 msgs = messages.get_messages(r'data/my_rabbitmq_messages.txt')
 
 for m in msgs:
-    # Find headers with "exception" (case-insensitive) in their names
+    # find headers with "exception" (case-insensitive) in their names
     exception_headers = {k: v for k, v in m.headers.items() if k.lower().find("exception") != -1}
 
-    # Check if any exception headers were found
     if exception_headers:
         print(f"\nmessage id: {m.id}, payload: {m.payload}")
 
@@ -74,6 +73,7 @@ msgs = messages.get_messages(r'data/my_rabbitmq_messages.txt')
 messages_by_exception = {}
 
 for m in msgs:
+    # find headers with "exception" (case-insensitive) in their names
     exception_headers = {k: v for k, v in m.headers.items() if k.lower().find("exception") != -1}
     if exception_headers:
         for h in exception_headers.values():
