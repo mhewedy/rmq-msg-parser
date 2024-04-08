@@ -27,7 +27,7 @@ If your environment doesn't have pip, or you cannot install it, then follow the 
     ```
    then paste the code from the link above
 3. copy the messages into data/my_rabbitmq_messages.txt (
-   see [data/my_rabbitmq_messages.txt](https://raw.githubusercontent.com/mhewedy/rmq-msg-parser/master/data/my_rabbitmq_messages.py)
+   see [data/my_rabbitmq_messages.txt](https://raw.githubusercontent.com/mhewedy/rmq-msg-parser/master/data/my_rabbitmq_messages.txt)
    for a reference )
    ```shell
    vim data/my_rabbitmq_messages.txt
