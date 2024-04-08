@@ -1,0 +1,71 @@
+
+
+Messages:
+
+Message 1
+
+The server reported 1 message remaining.
+Exchange 	card_exchange
+Routing Key
+Redelivered 	●
+Properties
+priority:	0
+delivery_mode:	2
+headers:
+HttpMethod:	POST
+HttpResponseCode:	200
+HttpResponseText:	OK
+RabbitmqDeliveryTag:	107
+RabbitmqExchangeName:	card_exchange
+RabbitmqRedeliveryTag:	false
+RabbitmqRoutingKey:
+Content-Length:	2595
+Content-Type:	application/json
+Date:	Mon, 06 Mar 2023 06:27:47 GMT
+ExceptionMessage:	Error in procesing card
+RetryCount:	3
+Timestamp:	2023-03-06T06:27:57.353606413Z
+invalidate_token:	true
+rabbitmq.DELIVERY_MODE:	2
+content_encoding:	UTF-8
+content_type:	application/json
+Payload
+24 bytes
+Encoding: string
+
+
+{"cardId":1234}
+
+Message 2
+
+The server reported 0 messages remaining.
+Exchange 	card_payment_exchange
+Routing Key
+Redelivered 	●
+Properties
+priority:	0
+delivery_mode:	2
+headers:
+HttpMethod:	POST
+HttpResponseCode:	200
+HttpResponseText:	OK
+RabbitmqDeliveryTag:	107
+RabbitmqExchangeName:	card_payment_exchange
+RabbitmqRedeliveryTag:	false
+RabbitmqRoutingKey:
+Content-Length:	2595
+Content-Type:	application/json
+Date:	Mon, 06 Mar 2023 06:27:47 GMT
+ExceptionMessage:	Error in receiving payment
+ErrorMessage:	RuntimeError: Failed to connect to remote service
+Timestamp:	2023-03-06T06:27:57.353606413Z
+invalidate_token:	true
+rabbitmq.DELIVERY_MODE:	2
+content_encoding:	UTF-8
+content_type:	application/json
+Payload
+24 bytes
+Encoding: string
+
+
+{"cardId":5678}
